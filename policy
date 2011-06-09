@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+use strict;
+use PolicyServer;
+PolicyServer->run(
+  port      => 9001,
+  log_level => 4,
+);

@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+use strict;
+use TableServer;
+TableServer->run(
+  port      => 9002,
+  log_level => 4,
+);
