@@ -1,0 +1,16 @@
+virtual_alias_maps = hash:/etc/postfix/virtual
+
+smtpd_helo_restrictions        = check_helo_access tcp:localhost:9002,
+                                 check_policy_service inet:localhost:9001
+
+smtpd_client_restrictions      = check_policy_service inet:localhost:9001
+
+smtpd_recipient_restrictions   = check_policy_service inet:localhost:9001,
+                                 check_recipient_access tcp:localhost:9002,
+                                 reject
+
+smtpd_data_restrictions        = check_policy_service inet:localhost:9001
+smtpd_end_of_data_restrictions = check_policy_service inet:localhost:9001
+
+smtpd_sender_restrictions      = check_policy_service inet:localhost:9001
+
