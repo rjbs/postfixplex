@@ -2,6 +2,7 @@
 use strict;
 use PolicyServer;
 PolicyServer->run(
-  port      => 9001,
-  log_level => 4,
+  port        => 9001,
+  log_level   => 4,
+  min_servers => 10,
 );

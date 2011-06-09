@@ -2,6 +2,7 @@
 use strict;
 use TableServer;
 TableServer->run(
-  port      => 9002,
-  log_level => 4,
+  port        => 9002,
+  log_level   => 4,
+  min_servers => 10,
 );
